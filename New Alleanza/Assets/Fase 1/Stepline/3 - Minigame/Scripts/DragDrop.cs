@@ -21,7 +21,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrag (PointerEventData eventData)
     {
-        rt.anchoredPosition += eventData.delta;
+        rt.anchoredPosition += eventData.delta * 2;
         colide.blocksRaycasts = false;
     }
 
