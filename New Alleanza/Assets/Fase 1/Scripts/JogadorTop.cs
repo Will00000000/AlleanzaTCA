@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class JogadorTop : MonoBehaviour
 {
-    Rigidbody2D rig;
+    private Rigidbody2D rig;
     private Camera visaoAtaque;
     
     public bool CamSeguindo = true;
