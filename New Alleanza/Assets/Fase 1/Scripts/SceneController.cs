@@ -17,4 +17,11 @@ public class NewBehaviourScript : MonoBehaviour
     {
         SceneManager.LoadScene("TopDown");
     }
+
+
+    public void Resume(GameObject pauseMenu)
+    {
+        pauseMenu.SetActive(false); 
+        Time.timeScale = 1;        
+    }
 }
