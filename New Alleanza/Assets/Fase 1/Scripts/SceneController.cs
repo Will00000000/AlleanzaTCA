@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
+    [SerializeField] GameObject pauseMenu;
+
     public void SceneBeach()
     {
         SceneManager.LoadScene("Praia");
@@ -18,25 +20,21 @@ public class NewBehaviourScript : MonoBehaviour
         SceneManager.LoadScene("TopDown");
     }
 
-
-    public void Resume(GameObject pauseMenu)
+    public void Resume()
     {
-        pauseMenu.SetActive(false); 
-        Time.timeScale = 1;        
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
-    public void Pause(GameObject pauseMenu)
+    public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
-    public void AbrirConfiguracoes()
+    public void MenuConfig (GameObject menuConfig)
     {
-
-        pauseMenu.SetActive(false);
-        configuracoesMenu.SetActive(true);
-
+        pauseMenu.SetActive (false);
+        menuConfig.SetActive (true);
     }
-    
 }
