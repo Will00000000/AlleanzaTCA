@@ -29,4 +29,16 @@ public class ControleCena : MonoBehaviour
         inventario.SetActive(false);
         Time.timeScale = 0;
     }
+
+    public void MapaAbre(GameObject mapa)
+    {
+        mapa.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void MapaFecha(GameObject mapa)
+    {
+        mapa.SetActive(false);
+        Time.timeScale = 0;
+    }
 }
