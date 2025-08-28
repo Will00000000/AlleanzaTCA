@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Jogador2D : MonoBehaviour
+public class JogadorMar2D : MonoBehaviour
 {
     Rigidbody2D rig;
     public float velocidade, forcaDash;

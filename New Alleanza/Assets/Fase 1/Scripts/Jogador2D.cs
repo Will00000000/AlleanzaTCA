@@ -3,7 +3,7 @@ using UnityEngine;
 public class Jogador2D : MonoBehaviour
 {
     [SerializeField] float velocidade;
-    private Rigidbody2D rig2D;
+    private Rigidbody2D rig;
 
     void Start()
     {

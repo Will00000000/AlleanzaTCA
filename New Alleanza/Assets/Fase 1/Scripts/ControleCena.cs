@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ControleCena : MonoBehaviour
 {
     public void SceneBeach()
     {
@@ -16,5 +16,17 @@ public class NewBehaviourScript : MonoBehaviour
     public void SceneTopDraft()
     {
         SceneManager.LoadScene("TopDown");
+    }
+
+    public void InventarioAbre(GameObject inventario)
+    {
+        inventario.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void inventarioFecha(GameObject inventario)
+    {
+        inventario.SetActive(false);
+        Time.timeScale = 0;
     }
 }
