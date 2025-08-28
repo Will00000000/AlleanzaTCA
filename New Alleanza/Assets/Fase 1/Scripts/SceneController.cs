@@ -24,4 +24,19 @@ public class NewBehaviourScript : MonoBehaviour
         pauseMenu.SetActive(false); 
         Time.timeScale = 1;        
     }
+
+    public void Pause(GameObject pauseMenu)
+    {
+        pauseMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void AbrirConfiguracoes()
+    {
+
+        pauseMenu.SetActive(false);
+        configuracoesMenu.SetActive(true);
+
+    }
+    
 }
