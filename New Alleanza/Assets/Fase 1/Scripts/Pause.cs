@@ -8,29 +8,12 @@ public class Pause : MonoBehaviour
     public bool isPause;
     public GameObject postProcessVolume;
 
-    // Start is called before the first frame update
     void Start()
     {
         PauseMenu.SetActive(false);
 
         if (postProcessVolume != null)
             postProcessVolume.SetActive(false); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isPause)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
     }
 
     public void PauseGame()
