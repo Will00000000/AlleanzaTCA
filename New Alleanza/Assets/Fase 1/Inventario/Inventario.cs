@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Inventario : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform[] slots; //lista que armazena as posições dos slots;
 
-    // Update is called once per frame
-    void Update()
+    public bool AdicionarItem(GameObject itemPrefab, GameObject itemSprite)
     {
-        
+        foreach (var slot in slots)
+        {
+            if (slot.childCount == 0)
+            {
+                GameObject item = Instantiate(itemPrefab, slot);
+                item.GetComponent<ArrastaItem>().parentDepoisArrastar = slot;
+
+                Image itemImage = item.GetComponent<Image>();
+                if (itemImage != null && itemSprite != null)
+                {
+                    itemImage.sprite = itemSprite;
+                }
+                return true;
+            }
+        }
+        return false;
     }
 }
